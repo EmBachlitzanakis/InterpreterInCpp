@@ -16,6 +16,13 @@ public:
 	Lexer(std::string input, int position, int readPosition, char ch);
 
 	void readChar();
+	void skipWhitespace();
+
+	std::string readNumber();
+
+	std::string readIdentifier();
+
+	char peekChar();
 
 };
 

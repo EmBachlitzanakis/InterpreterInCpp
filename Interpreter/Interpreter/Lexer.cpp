@@ -15,4 +15,39 @@ void Lexer::readChar() {
     position = readPosition;
     readPosition++;
 }
-void
+std::string Lexer::readNumber() {
+	Helper checker;
+	std::string number;
+	while (checker.isDigit(ch)) {
+		number += ch;
+		readChar();
+	}
+	return number;
+}
+
+std::string Lexer::readIdentifier() {
+	Helper checker;
+	std::string identifier;
+	while (checker.isLetter(ch)) {
+		identifier += ch;
+		readChar();
+	}
+	return identifier;
+}
+
+void Lexer::skipWhitespace() {
+	Helper checker;
+	while (checker.isWhitespace(ch)) {
+		readChar();
+	}
+	
+}
+
+char Lexer::peekChar() {
+	if (readPosition >= input.length()) {
+		return '\0';
+	}
+	else {
+		return input[readPosition];
+	}
+}
