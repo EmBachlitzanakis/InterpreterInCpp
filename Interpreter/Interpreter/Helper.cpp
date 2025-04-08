@@ -9,3 +9,6 @@ bool Helper::isLetter(char ch) {
 bool Helper::isDigit(char ch) {
     return (ch >= '0' && ch <= '9');
 }
+bool Helper::isWhitespace(char ch) {
+	return (ch == ' ' || ch == '\t' || ch == '\n' || ch == '\r');
+}

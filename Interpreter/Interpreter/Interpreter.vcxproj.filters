@@ -19,6 +19,9 @@
     <Filter Include="Helper">
       <UniqueIdentifier>{9d43e670-ac71-4bd2-b98b-bc87e6d25653}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Token">
+      <UniqueIdentifier>{49c4c3e9-4ef9-4ac2-a6b7-eacdc9e78bf2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Helper.h">
@@ -27,6 +30,12 @@
     <ClInclude Include="Lexer.h">
       <Filter>Lexer</Filter>
     </ClInclude>
+    <ClInclude Include="token.h">
+      <Filter>Token</Filter>
+    </ClInclude>
+    <ClInclude Include="main.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Lexer.cpp">
@@ -34,6 +43,12 @@
     </ClCompile>
     <ClCompile Include="Helper.cpp">
       <Filter>Helper</Filter>
+    </ClCompile>
+    <ClCompile Include="token.cpp">
+      <Filter>Token</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

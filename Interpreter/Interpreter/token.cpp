@@ -2,7 +2,7 @@
 #include <string>
 #include <unordered_map>
 
-std::string tokenTypeToString(TokenType type) {
+std::string Token::tokenTypeToString(TokenType type) {
     switch (type) {
     case TokenType::ILLEGAL: return "ILLEGAL";
     case TokenType::END_OF_FILE: return "EOF";
@@ -37,7 +37,10 @@ std::string tokenTypeToString(TokenType type) {
 
 Token::Token(TokenType type, std::string literal) : type(type), literal(literal) {}
 
-static const std::unordered_map<std::string, TokenType> keywords = {
+
+
+TokenType Token::lookupIdent(const std::string& ident) {
+    static const std::unordered_map<std::string, TokenType> keywords = {
     {"fn", TokenType::FUNCTION},
     {"let", TokenType::LET},
     {"true", TokenType::TRUE},
@@ -45,9 +48,7 @@ static const std::unordered_map<std::string, TokenType> keywords = {
     {"if", TokenType::IF},
     {"else", TokenType::ELSE},
     {"return", TokenType::RETURN}
-};
-
-TokenType lookupIdent(const std::string& ident) {
+    };
     auto it = keywords.find(ident);
     if (it != keywords.end()) {
         return it->second;

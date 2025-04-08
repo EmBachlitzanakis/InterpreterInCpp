@@ -2,6 +2,8 @@
 
 #include <string>
 #include "Helper.h"
+#include "token.h"
+
 
 class Lexer
 {
@@ -22,7 +24,10 @@ public:
 
 	std::string readIdentifier();
 
+	Token NextToken();
+
 	char peekChar();
+	Token newToken(TokenType type, char literal);
 
 };
 
