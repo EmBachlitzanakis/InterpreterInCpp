@@ -41,8 +41,7 @@ void Lexer::skipWhitespace() {
 	Helper checker;
 	while (checker.isWhitespace(ch)) {
 		readChar();
-	}
-	
+	}	
 }
 
 char Lexer::peekChar() {

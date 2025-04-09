@@ -7,13 +7,8 @@
 enum class TokenType {
     ILLEGAL,
     END_OF_FILE,
-
-    // Identifiers + literals
     IDENT,
     INT,
-    // STRING,
-
-    // Operators
     ASSIGN,
     PLUS,
     MINUS,
@@ -24,16 +19,12 @@ enum class TokenType {
     NOT_EQ,
     LT,
     GT,
-
-    // Delimiters
     COMMA,
     SEMICOLON,
     LPAREN,
     RPAREN,
     LBRACE,
     RBRACE,
-
-    // Keywords
     FUNCTION,
     LET,
     TRUE,

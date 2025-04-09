@@ -22,6 +22,9 @@
     <Filter Include="Token">
       <UniqueIdentifier>{49c4c3e9-4ef9-4ac2-a6b7-eacdc9e78bf2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ast">
+      <UniqueIdentifier>{b03a0cf5-8779-44e7-8429-f67342f4a06e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Helper.h">
@@ -36,6 +39,18 @@
     <ClInclude Include="main.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Node.h">
+      <Filter>ast</Filter>
+    </ClInclude>
+    <ClInclude Include="Statement.h">
+      <Filter>ast</Filter>
+    </ClInclude>
+    <ClInclude Include="Expression.h">
+      <Filter>ast</Filter>
+    </ClInclude>
+    <ClInclude Include="Program.h">
+      <Filter>ast</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Lexer.cpp">
@@ -49,6 +64,18 @@
     </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Node.cpp">
+      <Filter>ast</Filter>
+    </ClCompile>
+    <ClCompile Include="Statement.cpp">
+      <Filter>ast</Filter>
+    </ClCompile>
+    <ClCompile Include="Expression.cpp">
+      <Filter>ast</Filter>
+    </ClCompile>
+    <ClCompile Include="Program.cpp">
+      <Filter>ast</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
