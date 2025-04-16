@@ -1,5 +1,4 @@
-#ifndef LETSTATEMENT_H
-#define LETSTATEMENT_H
+#pragma once
 
 #include "Statement.h"
 #include "Expression.h"

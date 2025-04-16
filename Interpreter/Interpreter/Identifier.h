@@ -11,7 +11,7 @@ public:
     std::string Value; 
 
     // Constructor
-    Identifier(const ::Token& token, const std::string& value);
+    Identifier( ::Token token,  std::string value);
 
     // Destructor
     ~Identifier() override;

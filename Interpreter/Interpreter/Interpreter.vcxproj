@@ -127,21 +127,31 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Boolean.h" />
     <ClInclude Include="Expression.h" />
     <ClInclude Include="Helper.h" />
+    <ClInclude Include="Identifier.h" />
+    <ClInclude Include="IntegerLiteral.h" />
+    <ClInclude Include="LetStatement.h" />
     <ClInclude Include="Lexer.h" />
     <ClInclude Include="main.h" />
     <ClInclude Include="Node.h" />
+    <ClInclude Include="PrefixExpression.h" />
     <ClInclude Include="Program.h" />
     <ClInclude Include="Statement.h" />
     <ClInclude Include="token.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Boolean.cpp" />
     <ClCompile Include="Expression.cpp" />
     <ClCompile Include="Helper.cpp" />
+    <ClCompile Include="Identifier.cpp" />
+    <ClCompile Include="IntegerLiteral.cpp" />
+    <ClCompile Include="LetStatement.cpp" />
     <ClCompile Include="Lexer.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Node.cpp" />
+    <ClCompile Include="PrefixExpression.cpp" />
     <ClCompile Include="Program.cpp" />
     <ClCompile Include="Statement.cpp" />
     <ClCompile Include="token.cpp" />

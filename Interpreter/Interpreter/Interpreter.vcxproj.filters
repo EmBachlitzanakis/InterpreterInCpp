@@ -25,6 +25,33 @@
     <Filter Include="ast">
       <UniqueIdentifier>{b03a0cf5-8779-44e7-8429-f67342f4a06e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ast\Boolean">
+      <UniqueIdentifier>{86efa418-01e3-4711-aa6b-09025163aece}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ast\Expression">
+      <UniqueIdentifier>{4c3d5b72-ce91-4877-bb98-5db11a415103}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ast\Identifier">
+      <UniqueIdentifier>{2e226f97-514f-4500-b2ba-765d9a770943}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ast\LetStatement">
+      <UniqueIdentifier>{8d73825e-2136-495a-974b-dcbda5d8bbff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ast\Node">
+      <UniqueIdentifier>{f919300a-75ed-40cc-8fca-df340f14e0d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ast\Statement">
+      <UniqueIdentifier>{2ce9cd4e-80db-4e5b-a29f-735b551341b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ast\Program">
+      <UniqueIdentifier>{613079f2-a24c-4dd3-84ef-40bd0c4e5d9c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ast\IntegerLiteral">
+      <UniqueIdentifier>{d3e36deb-28cb-464d-86d7-c809ffca361c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ast\PrefixExpression">
+      <UniqueIdentifier>{db4641fe-ee76-4531-bee9-e238c456dabd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Helper.h">
@@ -39,17 +66,32 @@
     <ClInclude Include="main.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Node.h">
-      <Filter>ast</Filter>
-    </ClInclude>
-    <ClInclude Include="Statement.h">
-      <Filter>ast</Filter>
+    <ClInclude Include="Boolean.h">
+      <Filter>ast\Boolean</Filter>
     </ClInclude>
     <ClInclude Include="Expression.h">
-      <Filter>ast</Filter>
+      <Filter>ast\Expression</Filter>
+    </ClInclude>
+    <ClInclude Include="Identifier.h">
+      <Filter>ast\Identifier</Filter>
+    </ClInclude>
+    <ClInclude Include="LetStatement.h">
+      <Filter>ast\LetStatement</Filter>
+    </ClInclude>
+    <ClInclude Include="Node.h">
+      <Filter>ast\Node</Filter>
+    </ClInclude>
+    <ClInclude Include="Statement.h">
+      <Filter>ast\Statement</Filter>
     </ClInclude>
     <ClInclude Include="Program.h">
-      <Filter>ast</Filter>
+      <Filter>ast\Program</Filter>
+    </ClInclude>
+    <ClInclude Include="IntegerLiteral.h">
+      <Filter>ast\IntegerLiteral</Filter>
+    </ClInclude>
+    <ClInclude Include="PrefixExpression.h">
+      <Filter>ast\PrefixExpression</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -65,17 +107,32 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Node.cpp">
-      <Filter>ast</Filter>
-    </ClCompile>
-    <ClCompile Include="Statement.cpp">
-      <Filter>ast</Filter>
+    <ClCompile Include="Boolean.cpp">
+      <Filter>ast\Boolean</Filter>
     </ClCompile>
     <ClCompile Include="Expression.cpp">
-      <Filter>ast</Filter>
+      <Filter>ast\Expression</Filter>
+    </ClCompile>
+    <ClCompile Include="Identifier.cpp">
+      <Filter>ast\Identifier</Filter>
+    </ClCompile>
+    <ClCompile Include="LetStatement.cpp">
+      <Filter>ast\LetStatement</Filter>
+    </ClCompile>
+    <ClCompile Include="Node.cpp">
+      <Filter>ast\Node</Filter>
+    </ClCompile>
+    <ClCompile Include="Statement.cpp">
+      <Filter>ast\Statement</Filter>
     </ClCompile>
     <ClCompile Include="Program.cpp">
-      <Filter>ast</Filter>
+      <Filter>ast\Program</Filter>
+    </ClCompile>
+    <ClCompile Include="IntegerLiteral.cpp">
+      <Filter>ast\IntegerLiteral</Filter>
+    </ClCompile>
+    <ClCompile Include="PrefixExpression.cpp">
+      <Filter>ast\PrefixExpression</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
