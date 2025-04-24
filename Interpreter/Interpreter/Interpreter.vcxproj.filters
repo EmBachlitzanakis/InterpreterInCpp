@@ -52,6 +52,12 @@
     <Filter Include="ast\PrefixExpression">
       <UniqueIdentifier>{db4641fe-ee76-4531-bee9-e238c456dabd}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ast\InfixExpression">
+      <UniqueIdentifier>{28a021e3-f09b-4d9d-8b06-15c1aa821ece}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ast\CallExpression">
+      <UniqueIdentifier>{dd13b6c3-660f-4c72-ad0a-94869815702a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Helper.h">
@@ -93,6 +99,12 @@
     <ClInclude Include="PrefixExpression.h">
       <Filter>ast\PrefixExpression</Filter>
     </ClInclude>
+    <ClInclude Include="InfixExpression.h">
+      <Filter>ast\InfixExpression</Filter>
+    </ClInclude>
+    <ClInclude Include="CallExpression.h">
+      <Filter>ast\CallExpression</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Lexer.cpp">
@@ -133,6 +145,12 @@
     </ClCompile>
     <ClCompile Include="PrefixExpression.cpp">
       <Filter>ast\PrefixExpression</Filter>
+    </ClCompile>
+    <ClCompile Include="InfixExpression.cpp">
+      <Filter>ast\InfixExpression</Filter>
+    </ClCompile>
+    <ClCompile Include="CallExpression.cpp">
+      <Filter>ast\CallExpression</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

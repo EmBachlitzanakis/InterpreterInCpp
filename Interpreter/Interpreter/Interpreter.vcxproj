@@ -128,9 +128,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Boolean.h" />
+    <ClInclude Include="CallExpression.h" />
     <ClInclude Include="Expression.h" />
     <ClInclude Include="Helper.h" />
     <ClInclude Include="Identifier.h" />
+    <ClInclude Include="InfixExpression.h" />
     <ClInclude Include="IntegerLiteral.h" />
     <ClInclude Include="LetStatement.h" />
     <ClInclude Include="Lexer.h" />
@@ -143,9 +145,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Boolean.cpp" />
+    <ClCompile Include="CallExpression.cpp" />
     <ClCompile Include="Expression.cpp" />
     <ClCompile Include="Helper.cpp" />
     <ClCompile Include="Identifier.cpp" />
+    <ClCompile Include="InfixExpression.cpp" />
     <ClCompile Include="IntegerLiteral.cpp" />
     <ClCompile Include="LetStatement.cpp" />
     <ClCompile Include="Lexer.cpp" />
