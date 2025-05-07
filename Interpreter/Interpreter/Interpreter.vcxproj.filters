@@ -58,6 +58,9 @@
     <Filter Include="ast\CallExpression">
       <UniqueIdentifier>{dd13b6c3-660f-4c72-ad0a-94869815702a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ast\BlockStatement">
+      <UniqueIdentifier>{74249c08-7027-4c23-b89a-6f063eeb84a8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Helper.h">
@@ -105,6 +108,9 @@
     <ClInclude Include="CallExpression.h">
       <Filter>ast\CallExpression</Filter>
     </ClInclude>
+    <ClInclude Include="BlockStatement.h">
+      <Filter>ast\BlockStatement</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Lexer.cpp">
@@ -151,6 +157,9 @@
     </ClCompile>
     <ClCompile Include="CallExpression.cpp">
       <Filter>ast\CallExpression</Filter>
+    </ClCompile>
+    <ClCompile Include="BlockStatement.cpp">
+      <Filter>ast\BlockStatement</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

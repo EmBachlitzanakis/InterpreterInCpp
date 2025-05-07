@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="BlockStatement.h" />
     <ClInclude Include="Boolean.h" />
     <ClInclude Include="CallExpression.h" />
     <ClInclude Include="Expression.h" />
@@ -144,6 +145,7 @@
     <ClInclude Include="token.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="BlockStatement.cpp" />
     <ClCompile Include="Boolean.cpp" />
     <ClCompile Include="CallExpression.cpp" />
     <ClCompile Include="Expression.cpp" />
