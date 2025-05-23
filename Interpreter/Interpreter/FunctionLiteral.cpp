@@ -1,65 +1,44 @@
 #include "FunctionLiteral.h"
 #include <sstream>
 
-FunctionLiteral::FunctionLiteral(const Token& token) : token_(token), body_(nullptr) {
-}
-
-FunctionLiteral::~FunctionLiteral() {
-    // Clean up parameters
-    for (auto param : parameters_) {
-        delete param;
-    }
-
-    // Clean up body if it exists and we own it
-    delete body_;
-}
-
-void FunctionLiteral::AddParameter(Identifier* parameter) {
-    parameters_.push_back(parameter);
-}
-
-void FunctionLiteral::SetBody(BlockStatement* body) {
-    body_ = body;
-}
-
-const std::vector<Identifier*>& FunctionLiteral::GetParameters() const {
-    return parameters_;
-}
-
-BlockStatement* FunctionLiteral::GetBody() const {
-    return body_;
+FunctionLiteral::FunctionLiteral(
+    const Token& token,
+    const std::vector<std::shared_ptr<Identifier>>& parameters,
+    std::shared_ptr<BlockStatement> body)
+    : token(token),
+    parameters(parameters),
+    body(body) {
 }
 
 void FunctionLiteral::expressionNode() {
+    // Empty implementation as in the Go code
 }
 
 std::string FunctionLiteral::TokenLiteral() const {
-    return token_.literal;
+    return token.literal;
 }
 
 std::string FunctionLiteral::String() const {
-    std::stringstream out;
+    std::ostringstream out;
 
-    // Build parameters string
-    std::vector<std::string> params;
-    for (const auto& p : parameters_) {
-        params.push_back(p->String());
+    // Convert parameters to strings
+    std::vector<std::string> paramStrs;
+    for (const auto& p : parameters) {
+        paramStrs.push_back(p->String());
     }
 
-    // Join parameters with comma and space
+    // Join parameters with comma
     std::string paramsStr;
-    for (size_t i = 0; i < params.size(); ++i) {
-        if (i > 0) {
-            paramsStr += ", ";
-        }
-        paramsStr += params[i];
+    for (size_t i = 0; i < paramStrs.size(); i++) {
+        if (i > 0) paramsStr += ", ";
+        paramsStr += paramStrs[i];
     }
 
-    out << TokenLiteral() << "(" << paramsStr << ") ";
-
-    if (body_) {
-        out << body_->String();
-    }
+    out << TokenLiteral();
+    out << "(";
+    out << paramsStr;
+    out << ") ";
+    out << body->String();
 
     return out.str();
 }
