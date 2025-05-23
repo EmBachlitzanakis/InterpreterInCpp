@@ -61,6 +61,12 @@
     <Filter Include="ast\BlockStatement">
       <UniqueIdentifier>{74249c08-7027-4c23-b89a-6f063eeb84a8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ast\IfExpression">
+      <UniqueIdentifier>{72edacc2-c30b-4e64-8cda-34ada832092c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ast\FunctionLiteral">
+      <UniqueIdentifier>{340aa96c-30f8-4209-bdab-5c60ca87fdd7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Helper.h">
@@ -111,6 +117,12 @@
     <ClInclude Include="BlockStatement.h">
       <Filter>ast\BlockStatement</Filter>
     </ClInclude>
+    <ClInclude Include="IfExpression.h">
+      <Filter>ast\IfExpression</Filter>
+    </ClInclude>
+    <ClInclude Include="FunctionLiteral.h">
+      <Filter>ast\FunctionLiteral</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Lexer.cpp">
@@ -160,6 +172,12 @@
     </ClCompile>
     <ClCompile Include="BlockStatement.cpp">
       <Filter>ast\BlockStatement</Filter>
+    </ClCompile>
+    <ClCompile Include="IfExpression.cpp">
+      <Filter>ast\IfExpression</Filter>
+    </ClCompile>
+    <ClCompile Include="FunctionLiteral.cpp">
+      <Filter>ast\FunctionLiteral</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -12,9 +12,8 @@ class Program {
 public:
     std::vector<Statement*> Statements;
 
-    Program() : Statements() {}
-
-    ~Program() {}
+    Program();
+    ~Program();
 
     // C++ equivalent of Go's TokenLiteral()
     std::string TokenLiteral() const;
