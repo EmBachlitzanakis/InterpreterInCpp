@@ -3,19 +3,32 @@
 #include "token.h"
 
 int main() {
-  std::string input;
-    std::cout << "Enter a string to tokenize: ";
-    std::getline(std::cin, input);
+    std::string input = R"(
+        let five = 5;
+        let ten = 10;
+        let add = fn(x, y) {
+            return x + y;
+        };
+        let result = add(five, ten);
+    )";
 
     Lexer lexer(input, 0, 0, ' ');
-    std::cout << "Input: " << input << "\n";
-
-    Token token = lexer.NextToken();
-    while (token.type != TokenType::END_OF_FILE) {
-        std::cout << "Type: " << Token::tokenTypeToString(token.type)
-                  << ", Literal: " << token.literal << "\n";
-        token = lexer.NextToken();
+    Parser parser(lexer);
+    
+    auto program = parser.ParseProgram();
+    auto errors = parser.Errors();
+    
+    if (!errors.empty()) {
+        std::cout << "Parser errors:\n";
+        for (const auto& err : errors) {
+            std::cout << "\t" << err << "\n";
+        }
+        return 1;
     }
+
+    std::cout << "Program parsed successfully!\n";
+    std::cout << "Program string representation:\n";
+    std::cout << program->String() << "\n";
 
     return 0;
 }
